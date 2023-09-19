@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="static/theme.css" rel="stylesheet">
+    <style>
+        body {
+          background-image: url(static/img/matterhorn-bg.png);
+          background-repeat: no-repeat;
+          background-position: bottom;
+          background-size: 100%;
+        }
+        </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&display=swap" rel="stylesheet">
+    <title>Swisssh</title>
+  </head>
+<body>    
+    <div class="flex flex-col min-h-screen justify-between items-center max-w-4xl mx-auto font-sans">
+        <main class="flex-1 grid px-4 py-8 place-items-center">
+            <div class="grid text-left place-content-center">
+                <section>
+                    <div class="max-w-2xl px-4 mx-auto lg:px-12">
+                        <h3 class="text-3xl font-bold text-swiss">Swisssh</h3>
+                            <div class="text-sm space-y-3 text-slate-500">
+                                <p>Your Swiss army knife for corporate records and investigative database research</p>
+                        <form class="flex gap-2">
+                            <input class="w-full rounded" id="inputfield" placeholder="Enter the name of a company or officer..." type="text"> 
+                        </form>
+                    </div>
+                        <div class="w-full mt-4 text-left">
+                            <select class="w-full bg-slate-200 px-4 py-2 rounded inline-flex gap-2 items-center text-sm" id="databases" required>
+                                <option>Choose...</option>
+                                <option value="https://offshoreleaks.icij.org/search?q=">ICIJ Offshore Leaks Database</option>
+                                <option value="https://www.offshorealert.com/?s=">OffshoreAlert</option>
+                                <option value="https://aleph.occrp.org/search?q=">OCCRP Aleph</option>
+                                <option value="https://www.opensanctions.org/search/?q=">OpenSanctions</option>
+                                <option value="https://register.openownership.org/search?q=">OpenOwnership</option>
+                                <option value="https://opencorporates.com/companies?q=">OpenCorporates</option>
+                                <option value="https://my.arubachamber.com/register/zoeken?q=">Aruba</option>
+                                <option value="https://abr.business.gov.au/Search/ResultsActive?SearchText=">Australia</option>
+                                <option value="https://www.wienerborse.at/listing/aktien/unternehmensliste/?_csrf=SA6rp8KJB54MRUhay3jDDyj34dxwKs_ZBhwX5YFK6B4QaJuQt_BjpkkDPSO9Mpx2G7aQhCZY-LUxK3uc9D-taQ%3D%3D&c16986%5BISSUER_NAME%5D=">Austria</option>
+                                <option value="https://www.rvp.ba/english/?Search_Data=">Bosnia</option>
+                                <option value="https://casadosdados.com.br/solucao/cnpj?q=">Brazil</option>
+                                <option value="https://beta.canadasbusinessregistries.ca/search/results?search=%7B">Canada</option>
+                                <option value="https://or.justice.cz/ias/ui/rejstrik-$firma?jenPlatne=PLATNE&nazev=">Czech Republic</option>
+                                <option value="https://datacvr.virk.dk/soegeresultater?fritekst=">Denmark</option>
+                                <option value="https://ariregister.rik.ee/eng/company_search_result/59339de?name_or_code=">Estonia</option>
+                                <option value="https://tietopalvelu.ytj.fi/?companyName=">Finland</option>
+                                <option value="https://www.societe.com/cgi-bin/liste?ori=avance&nom=">France</option>
+                                <option value="https://www.companyinfo.ge/en/corporations/search?name=">Georgia</option>
+                                <option value="https://www.indonesia-investments.com/business/indonesian-companies/item74?companysearchstring=">Indonesia</option>
+                                <option value="https://register.minjust.gov.kg/register/SearchAction.seam?city=&founder=&chief=&house=&room=&okpo=&number=&baseBusiness=&fullnameRu=">Kyrgyzstan</option>
+                                <option value="https://info.ur.gov.lv/?#/data-search?page=0&pageSize=5&q=">Latvia</option>
+                                <option value="https://teleservice.gouv.mc/rci/recherche?value=">Monaco</option>
+                                <option value="https://idno.md/companii?q=">Moldova</option>
+                                <option value="https://www.crm.com.mk/en/open-data/basic-profile-of-a-registered-entity?s=">North Macedonia</option>
+                                <option value="https://app.companiesoffice.govt.nz/companies/app/ui/pages/companies/search?mode=standard&type=entities&q=">New Zeland</option>
+                                <option value="https://rejestr.io/?q=">Poland</option>
+                                <option value="http://creationdentreprise.sn/en/finding-business?field_rc_societe_value=&field_ninea_societe_value=&denomination=">Senegal</option>
+                                <option value="http://www.crhov.rs/index.cfm?Opcija=1&RadioGroup1=ime&emitent=">Serbia</option>
+                                <option value="https://www.orsr.sk/hladaj_subjekt.asp?lan=en&OBMENO=">Slovakia</option>
+                                <option value="https://www.ajpes.si/fipo/rezultati.asp?status=1&OsnovnoIskanje=">Slovenia</option>
+                                <option value="https://foretagsinfo.bolagsverket.se/sok-foretagsinformation-web/foretag?sokord=">Sweden</option>
+                                <option value="https://www.zefix.ch/en/search/entity/list?mainSearch=">Switzerland</option>
+                                <option value="https://www.jerseyfsc.org/registry/registry-entities/?search=">Jersey</option>
+                                <option value="https://youcontrol.com.ua/search/?country=1&q=">Ukraine</option>
+                                <option value="https://find-and-update.company-information.service.gov.uk/search/companies?q=">United Kingdom</option>  
+                            </select>
+                        </div>
+                    <div class="w-full mt-4 text-left">
+                        <button class="bg-slate-200 px-4 py-2 rounded inline-flex gap-2 items-center text-sm" type="submit" onclick="searchdatabase()">Search</button>
+                    </div>
+                    <br>
+                    <div class="text-xs space-y-3 text-slate-500">
+                    <p><strong>Swisssh </strong>currently supports searches in databases maintained by the International Consortium of Investigative Journalists, Offshore Alert, Organized Crime and Corruption Reporting Project, OpenSanctions, OpenOwnership, OpenCorporates and corporate registers in
+                        Aruba, Australia, Austria, Bosnia, Brazil, Canada, Czech Republic, Denmark, Estonia,
+                        Finland, France, Georgia, Indonesia, Kyrgyzstan, Latvia, Monaco, Moldova, North Macedonia, New Zeland, Poland, Senegal, Serbia
+                        Slovakia, Slovenia, Sweden, Switzerland, Jersey, Ukraine, and the United Kingdom.
+                    </p>
+                    </div> 
+        </main>
+            <footer class="p-6">
+                <div class="text-center text-xs text-slate-500">
+                    <p class="text-center"><a href="https://github.com/neonpangolin/Swisssh">Source Code</p>
+                </div>
+            </footer>
+        </div>		
+    </div>
+</body>
+  <!-- Display Funtion -->
+  <script>
+    document.getElementById("databases").addEventListener("change", displaydatabase);
+  
+    function displaydatabase() {
+    var selected_value = document.getElementById("databases").value;
+    }
+  </script>
+  
+  <!-- Search Funtion -->
+  <script>
+    function searchdatabase() {
+    var selected_value = document.getElementById("databases").value;
+    const action = selected_value + document.querySelector("input").value; window.open(action) 
+    }
+  </script>
+</html>
